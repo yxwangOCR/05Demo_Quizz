@@ -5,6 +5,8 @@ const form = document.querySelector("form");
 const titleResult = document.querySelector(".results h2");
 const markResult = document.querySelector(".mark");
 const helpResult = document.querySelector(".help");
+const questionBlock = document.querySelectorAll(".question-block");
+const inputs = document.querySelectorAll("input[type='radio']");
 form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e) {
@@ -20,6 +22,7 @@ function handleSubmit(e) {
   });
 
   showResult(result);
+  addColors(result);
 }
 
 function showResult(result) {
@@ -81,3 +84,23 @@ function showResult(result) {
   }
 }
 
+function addColors(result) {
+  result.forEach((res, index) => {
+    if (res === true) {
+      questionBlock[index].style.backgroundImage =
+        "linear-gradient(to right, #a8ff78, #78ffd6)";
+    } else {
+      questionBlock[index].style.backgroundImage =
+        "linear-gradient(to right, #f5567b, #fd674c)";
+    }
+  });
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("input", resetColor);
+});
+
+function resetColor(e) {
+  const index = e.target.getAttribute("name").slice(1) - 1;
+  questionBlock[index].style.backgroundImage = "none";
+}
