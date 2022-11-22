@@ -1,0 +1,117 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: Open sans, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: clamp(20px, 5vw, 50px) 20px 10px;
+}
+h1 {
+  text-align: center;
+  color: #0e0e0e;
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+h1 span {
+  font-weight: 800;
+}
+.global-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.question-block {
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 5px;
+  background: #f1f1f1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.question-block h4 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #0e0e0e;
+  margin-bottom: 20px;
+}
+
+.question-block > div {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.question-block label,
+.question-block input[type="radio"] {
+  cursor: pointer;
+}
+
+.question-block label {
+  font-size: 20px;
+  color: #0e0e0e;
+  margin-left: 10px;
+}
+
+.question-block input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #0e0e0e;
+  outline: none;
+  transition: all 0.5s ease;
+  margin-right: 15px;
+}
+
+form button {
+  font-size: 20px;
+  display: block;
+  margin: 2em auto;
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #0e0e0e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+form button:hover {
+  background: #55975b;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.results {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.results h2 {
+  text-align: center;
+  color: #0e0e0e;
+  font-size: 20px;
+  padding: 0.5em;
+  margin: 0.5em auto;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.results h2 span {
+  font-weight: 800;
+}
+
+.mark,
+.help {
+  display: none;
+  text-align: center;
+  color: #0e0e0e;
+  font-size: 18px;
+  padding: 0.5em;
+  margin: 1em auto;
+  font-weight: 400;
+}
